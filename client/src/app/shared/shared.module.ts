@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FontSizeDirective } from './directives/font-size.directive';
-import { NameAndLastNamePipe } from './pipes/name-and-last-name.pipe';
 
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
@@ -19,8 +17,6 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
-    FontSizeDirective,
-    NameAndLastNamePipe
   ],
   imports: [
     CommonModule
