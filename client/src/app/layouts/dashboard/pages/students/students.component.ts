@@ -34,6 +34,14 @@ export class StudentsComponent {
       email:'neke@test.com',
       curso: 'React',
       createdAt: new Date()
+    },
+    {
+      id:3,
+      nombre:'Franco Matias',
+      apellido:'Ravera',
+      email:'fran@test.com',
+      curso: 'React',
+      createdAt: new Date()
     }
   ]
 
