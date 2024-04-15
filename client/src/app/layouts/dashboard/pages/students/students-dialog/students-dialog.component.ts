@@ -18,8 +18,8 @@ export class StudentsDialogComponent {
     @Inject(MAT_DIALOG_DATA) private editingStudent?: IStudent    
   ){
     this.studentsForm = this.formBuilder.group({
-      nombre: ['', [Validators.required, Validators.pattern('^[a-zA-Z\\s]+$')]],
-      apellido:['',[Validators.required,Validators.pattern('^[a-zA-Z\\s]+$')]],
+      nombre: ['', [Validators.required, Validators.pattern('^[a-zA-Z\\s]+$'), Validators.maxLength(12)]],
+      apellido:['',[Validators.required,Validators.pattern('^[a-zA-Z\\s]+$'), Validators.maxLength(12)]],
       email:['',[Validators.required,Validators.pattern('[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}')]],
       curso:['',[Validators.required]],      
     });
@@ -34,6 +34,14 @@ export class StudentsDialogComponent {
 
   get apellidoControl(){
     return this.studentsForm.get('apellido');
+  }
+
+  get emailControl(){
+    return this.studentsForm.get('email');
+  }
+
+  get cursoControl(){
+    return this.studentsForm.get('curso');
   }
 
   onSave() : void{

@@ -12,11 +12,18 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { NameLastNamePipe } from './pipes/name-last-name.pipe';
+import { SizeDirective } from './directives/size.directive';
+import { ValidatorFormPipe } from './pipes/validator-form.pipe';
 
 
 
 @NgModule({
   declarations: [
+  
+    NameLastNamePipe,
+       SizeDirective,
+       ValidatorFormPipe
   ],
   imports: [
     CommonModule
@@ -32,7 +39,10 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     ReactiveFormsModule,
     MatSelectModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    SizeDirective,
+    NameLastNamePipe,
+    ValidatorFormPipe
   ]
 })
 export class SharedModule { }
